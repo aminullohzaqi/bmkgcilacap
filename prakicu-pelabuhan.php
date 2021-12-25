@@ -69,6 +69,9 @@
                 <div class="content-title">
                     <h5>Prakiraan Cuaca Wilayah Pelayanan</h5>
                 </div>
+                <div class="content-subtitle">
+                    <p><?php echo $resultPrakiraanCuacaWilayahPelayanan[2] ?></p>
+                </div>
                 <div class="card">
                 <iframe src="Files/<?php echo $resultPrakiraanCuacaWilayahPelayanan[1] ?>"></iframe>
                 </div>
@@ -76,6 +79,9 @@
             <div class="col-md-6">
                 <div class="content-title">
                     <h5>Prakiraan Cuaca Pelabuhan Laut</h5>
+                </div>
+                <div class="content-subtitle">
+                    <p><?php echo $resultPrakiraanCuacaPelabuhanLaut[2] ?></p>
                 </div>
                 <div class="card">
                     <iframe src="Files/<?php echo $resultPrakiraanCuacaPelabuhanLaut[1] ?>"></iframe>
@@ -87,6 +93,9 @@
                 <div class="content-title">
                     <h5>Prakiraan Cuaca Pelabuhan</h5>
                 </div>
+                <div class="content-subtitle">
+                    <p><?php echo $resultPrakiraanCuacaPelabuhan[2] ?></p>
+                </div>
                 <div class="card">
                     <iframe src="Files/<?php echo $resultPrakiraanCuacaPelabuhan[1] ?>"></iframe>
                 </div>
@@ -94,6 +103,9 @@
             <div class="col-md-6">
                 <div class="content-title">
                     <h5>Pasang Surut</h5>
+                </div>
+                <div class="content-subtitle">
+                    <p><?php echo $resultPasangSurut[2] ?></p>
                 </div>
                 <div class="card">
                     <iframe src="Files/<?php echo $resultPasangSurut[1] ?>"></iframe>
