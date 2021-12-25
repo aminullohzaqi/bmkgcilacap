@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Des 2021 pada 11.37
+-- Waktu pembuatan: 25 Des 2021 pada 17.43
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.1
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `bmkgcilacap`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `awsdata`
+--
+
+CREATE TABLE `awsdata` (
+  `id` int(5) NOT NULL,
+  `curahhujan` decimal(3,2) NOT NULL,
+  `radiasi` decimal(4,2) NOT NULL,
+  `pasut` decimal(3,2) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `awsdata`
+--
+
+INSERT INTO `awsdata` (`id`, `curahhujan`, `radiasi`, `pasut`, `date`, `time`) VALUES
+(10, '1.40', '0.00', '1.70', '2021-12-25', '15:51:00'),
+(11, '1.40', '0.00', '1.80', '2021-12-25', '15:51:00'),
+(12, '1.40', '0.00', '1.70', '2021-12-25', '16:42:00');
 
 -- --------------------------------------------------------
 
@@ -75,6 +99,12 @@ INSERT INTO `user` (`id`, `username`, `password`, `role`) VALUES
 --
 
 --
+-- Indeks untuk tabel `awsdata`
+--
+ALTER TABLE `awsdata`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `bmkgfiles`
 --
 ALTER TABLE `bmkgfiles`
@@ -89,6 +119,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `awsdata`
+--
+ALTER TABLE `awsdata`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `bmkgfiles`
