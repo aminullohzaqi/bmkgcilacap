@@ -16,7 +16,5 @@
     $sr = number_format($result_api["solrad"], 1);
     $wl = number_format($result_api_water["waterlevel"],1);
 
-    echo ($wl);
-
     mysqli_query($conn, "INSERT INTO awsdata(curahhujan, radiasi, pasut, date, time) VALUES('$ch', '$sr', '$wl', '$date', '$time')");
 ?>
