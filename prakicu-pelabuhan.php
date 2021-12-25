@@ -55,6 +55,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="gempa-bumi.php">Gempa Bumi</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aws-monitoring.php">AWS</a>
+                    </li>
                 </ul>
             </div>
         </div>
