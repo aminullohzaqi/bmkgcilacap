@@ -1,3 +1,13 @@
+.last-update{
+    padding-left: 0.3em;
+    margin-bottom: 1em;
+}
+
+.status-aws{
+    padding-right: 0.3em;
+    margin-bottom: 1em;
+}
+
 .card-1{
     height: 14em;
     width: auto;

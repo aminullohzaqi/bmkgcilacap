@@ -4,6 +4,14 @@
     $data_api = file_get_contents('http://202.90.199.132/aws-new/data/station/latest/5000000060');
     $result_api = json_decode($data_api, true);
 
+    function statusAws($result){
+        if($result == "0"){
+            echo '<h4 style="color: red; text-align: right;">Offline</h4>';
+        } else{
+            echo '<h4 style="color: green; text-align: right;">Online</h4>';
+        }
+    }
+
     function getTime(){
         global $conn;
         $queryDb = mysqli_query($conn, "SELECT time FROM awsdata ORDER BY id ASC");
@@ -78,6 +86,18 @@
     </nav>
 
     <div class="container content">
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-6">
+                <div class="last-update">
+                    <h4>Last Update: <?php echo $result_api["waktu"]; ?></h4>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="status-aws">
+                    <?php statusAws($result_api["temp"]); ?>
+                </div>
+            </div>
+        </div>
         <div class="row d-flex justify-content-around">
             <div class="col-md-4">
                 <div class="card card-1 shadow">
