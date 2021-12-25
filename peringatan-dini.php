@@ -63,13 +63,19 @@
                 <div class="content-title">
                     <h5>Peringatan Dini Cuaca</h5>
                 </div>
+                <div class="content-subtitle">
+                    <p><?php echo $resultPeringatanDiniCuaca[2] ?></p>
+                </div>
                 <div class="card">
-                <iframe src="Files/<?php echo $resultPeringatanDiniCuaca[1] ?>"></iframe>
+                    <iframe src="Files/<?php echo $resultPeringatanDiniCuaca[1] ?>"></iframe>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="content-title">
                     <h5>Peringatan Dini Gelombang Tinggi</h5>
+                </div>
+                <div class="content-subtitle">
+                    <p><?php echo $resultPeringatanDiniGelombang[2] ?></p>
                 </div>
                 <div class="card">
                     <iframe src="Files/<?php echo $resultPeringatanDiniGelombang[1] ?>"></iframe>
