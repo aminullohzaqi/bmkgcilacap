@@ -1,0 +1,26 @@
+.card-1{
+    height: 14em;
+    width: auto;
+    padding: 1em;
+}
+
+.card-2{
+    height: 30em;
+    width: auto;
+    padding: 1em;
+}
+
+.card-title{
+    border-bottom-style: solid;
+    border-bottom-width: 0.2em;
+    border-bottom-color: #00E917;
+}
+
+.card-content{
+    padding-top: 3em;
+    text-align: center;
+}
+
+.pasutchart{
+    height: 30em;
+}

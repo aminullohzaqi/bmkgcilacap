@@ -1,0 +1,49 @@
+body{
+    font-family: sans-serif;
+    color: #424242;
+    background-color: #F4F6F6;
+}
+
+.content{
+    margin-top: 30px;
+}
+
+.brand-logo, .index{
+    display: flex;
+}
+
+a, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color: inherit;
+}
+
+.content-title{
+    padding: 0.2em;
+    border-bottom-width: 0.2em;
+    border-bottom-style: solid;
+    border-bottom-color: #00E917;
+    margin-bottom: 0.8em;
+}
+
+.card{
+    padding: 0.5em;
+    margin-bottom: 2em;
+}
+
+iframe{
+    width: 100%;
+    height: 25em;
+}
+
+object{
+    width: 100%;
+    height: 25em;
+}
+
+.odd{
+    background-color: #FDFEFE; 
+}
+
+.even{
+    background-color: #F4F6F6;
+}
