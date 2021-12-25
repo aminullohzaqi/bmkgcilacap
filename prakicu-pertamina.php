@@ -66,13 +66,19 @@
                 <div class="content-title">
                     <h5>Prakiraan Cuaca Kilang Pertamina</h5>
                 </div>
+                <div class="content-subtitle">
+                    <p><?php echo $resultPrakiraanCuacaKilang[2] ?></p>
+                </div>
                 <div class="card">
-                <iframe src="Files/<?php echo $resultPrakiraanCuacaKilang[1] ?>"></iframe>
+                    <iframe src="Files/<?php echo $resultPrakiraanCuacaKilang[1] ?>"></iframe>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="content-title">
                     <h5>Prakiraan Cuaca Area-70</h5>
+                </div>
+                <div class="content-subtitle">
+                    <p><?php echo $resultPrakiraanCuacaArea70[2] ?></p>
                 </div>
                 <div class="card">
                     <iframe src="Files/<?php echo $resultPrakiraanCuacaArea70[1] ?>"></iframe>
@@ -83,6 +89,9 @@
             <div class="col-md-6">
                 <div class="content-title">
                     <h5>Informasi Petir</h5>
+                </div>
+                <div class="content-subtitle">
+                    <p><?php echo $resultInformasiPetir[2] ?></p>
                 </div>
                 <div class="card">
                     <iframe src="Files/<?php echo $resultInformasiPetir[1] ?>"></iframe>
