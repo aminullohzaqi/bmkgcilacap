@@ -3,6 +3,13 @@
 
     $gempaBumi = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 51");
     $resultGempaBumi = mysqli_fetch_array($gempaBumi);
+
+    $data_api = file_get_contents('https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json');
+    $result_api = json_decode($data_api, true);
+
+    $shakemap = $result_api["Infogempa"]["gempa"]["Shakemap"];
+    $date = $result_api["Infogempa"]["gempa"]["Tanggal"];
+    $time = $result_api["Infogempa"]["gempa"]["Jam"];
 ?>
 
 <!DOCTYPE html>
@@ -55,13 +62,27 @@
     </nav>
 
     <div class="container content">
-        <div class="row d-flex justify-content-start">
+        <div class="row d-flex justify-content-around">
             <div class="col-md-6">
                 <div class="content-title">
-                    <h5>Informasi Gempa bumi</h5>
+                    <h5>Informasi Gempa Bumi</h5>
+                </div>
+                <div class="content-subtitle">
+                    <p><?php echo ("$date $time") ?></p>
                 </div>
                 <div class="card">
-                <iframe src="Files/<?php echo $resultGempaBumi[1] ?>"></iframe>
+                    <img src="https://data.bmkg.go.id/DataMKG/TEWS/<?php echo $shakemap; ?>" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="content-title">
+                    <h5>Informasi Gempa Bumi Jawa Tengah</h5>
+                </div>
+                <div class="content-subtitle">
+                    <p><?php echo $resultGempaBumi[2] ?></p>
+                </div>
+                <div class="card">
+                    <iframe src="Files/<?php echo $resultGempaBumi[1] ?>"></iframe>
                 </div>
             </div>
         </div>
