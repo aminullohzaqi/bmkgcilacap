@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../Assets/css/upload.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container content">
         <div class="row d-flex justify-content-center">
             <div class="col-md-5">
                 <div class="form-group">
