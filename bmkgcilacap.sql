@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Des 2021 pada 17.43
+-- Waktu pembuatan: 26 Des 2021 pada 04.11
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.1
 
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `awsdata` (
   `id` int(5) NOT NULL,
-  `curahhujan` decimal(3,2) NOT NULL,
-  `radiasi` decimal(4,2) NOT NULL,
-  `pasut` decimal(3,2) NOT NULL,
+  `curahhujan` decimal(4,2) NOT NULL,
+  `radiasi` decimal(6,2) NOT NULL,
+  `pasut` decimal(4,2) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -43,7 +43,11 @@ CREATE TABLE `awsdata` (
 INSERT INTO `awsdata` (`id`, `curahhujan`, `radiasi`, `pasut`, `date`, `time`) VALUES
 (10, '1.40', '0.00', '1.70', '2021-12-25', '15:51:00'),
 (11, '1.40', '0.00', '1.80', '2021-12-25', '15:51:00'),
-(12, '1.40', '0.00', '1.70', '2021-12-25', '16:42:00');
+(12, '1.40', '0.00', '1.70', '2021-12-25', '16:42:00'),
+(13, '0.00', '99.99', '1.20', '2021-12-26', '03:04:00'),
+(14, '0.00', '99.99', '1.20', '2021-12-26', '03:05:00'),
+(15, '0.00', '290.90', '1.20', '2021-12-26', '03:07:00'),
+(16, '0.00', '711.10', '1.20', '2021-12-26', '03:08:00');
 
 -- --------------------------------------------------------
 
@@ -124,7 +128,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `awsdata`
 --
 ALTER TABLE `awsdata`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT untuk tabel `bmkgfiles`
