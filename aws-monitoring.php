@@ -4,6 +4,16 @@
     $data_api = file_get_contents('http://202.90.199.132/aws-new/data/station/latest/5000000060');
     $result_api = json_decode($data_api, true);
 
+    $percent_temp = ((number_format($result_api["temp"],0) - 20)/(35 - 20)) * 100;
+    $percent_temp = number_format($percent_temp, 0);
+
+    $percent_rh = ((number_format($result_api["rh"],0) - 40)/(100 - 40)) * 100;
+    $percent_rh = number_format($percent_rh, 0);
+
+    $percent_ws = ((number_format($result_api["windspeed"],0) - 0)/(20 - 0)) * 100;
+    $percent_ws = number_format($percent_ws, 0);
+
+
     function statusAws($result){
         if($result == "0"){
             echo '<h4 style="color: red; text-align: right;">Offline</h4>';
@@ -46,6 +56,7 @@
     <link rel="stylesheet" type="text/css" href="Assets/css/bootstrap@5.1.3.css">
     <link rel="stylesheet" type="text/css" href="Assets/css/index.css">
     <link rel="stylesheet" type="text/css" href="Assets/css/aws.css">
+    <link rel="stylesheet" type="text/css" href="Assets/css/gauge.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed">
@@ -105,8 +116,8 @@
                     <div class="card-title">
                         <h6>Suhu Udara</h6>
                     </div>
-                    <div class="card-content" id="suhu">
-                        <h1><?php echo $result_api["temp"]; ?> °C</h1>
+                    <div class="card-gauge" id="suhu">
+                        <div class="GaugeMeter" data-percent="<?php echo $percent_temp; ?>" data-text="<font style='color:#424242;font-size:1em;letter-spacing:-1px'><?php echo $result_api["temp"]; ?></font>" data-size="200" data-theme="DarkRed-LightRed" data-back="RGBa(0,0,0,.1)" data-animate_gauge_colors="1" data-animate_text_colors="1" data-width="15" data-label="°C" data-style="Arch" data-label_color="#424242"></div>
                     </div>
                 </div>
             </div>
@@ -115,8 +126,8 @@
                     <div class="card-title">
                         <h6>Kelembaban Udara</h6>
                     </div>
-                    <div class="card-content">
-                        <h1><?php echo $result_api["rh"]; ?> %</h1>
+                    <div class="card-gauge">
+                        <div class="GaugeMeter" data-percent="<?php echo $percent_rh; ?>" data-text="<font style='color:#424242;font-size:1em;letter-spacing:-1px'><?php echo $result_api["rh"]; ?></font>" data-size="200" data-theme="DarkBlue-LightBlue" data-back="RGBa(0,0,0,.1)" data-animate_gauge_colors="1" data-animate_text_colors="1" data-width="15" data-label="%" data-style="Arch" data-label_color="#424242"></div>
                     </div>
                 </div>
             </div>
@@ -145,8 +156,8 @@
                     <div class="card-title">
                         <h6>Kecepatan Angin</h6>
                     </div>
-                    <div class="card-content">
-                        <h1><?php echo $result_api["windspeed"]; ?> m/s</h1>
+                    <div class="card-gauge">
+                        <div class="GaugeMeter" data-percent="<?php echo $percent_ws; ?>" data-text="<font style='color:#424242;font-size:1em;letter-spacing:-1px'><?php echo $result_api["windspeed"]; ?></font>" data-size="200" data-theme="DarkGreen-LightGreen" data-back="RGBa(0,0,0,.1)" data-animate_gauge_colors="1" data-animate_text_colors="1" data-width="15" data-label="m/s" data-style="Arch" data-label_color="#424242"></div>
                     </div>
                 </div>
             </div>
@@ -293,6 +304,12 @@
 			}
 		});
 	</script>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> 
+    <script src="Assets/js/GaugeMeter.js"></script> 
+    <script>
+        $(".GaugeMeter").gaugeMeter();
+    </script>
 
     <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/bootstrap@5.1.3.js"></script>
