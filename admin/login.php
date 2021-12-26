@@ -10,9 +10,8 @@
 </head>
 
 <body class="my-login-page">
-	<section class="h-100">
-		<div class="container h-100">
-			<div class="row justify-content-md-center h-100">
+		<div class="container">
+			<div class="row justify-content-center">
 				<div class="card-wrapper">
 					<div class="brand">
 						<img src="../Assets/img/logo_bmkg.png" alt="bmkg">
@@ -48,7 +47,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
 
 	<script src="../Assets/js/popper.min.js"></script>
     <script src="../Assets/js/bootstrap@5.1.3.js"></script>
