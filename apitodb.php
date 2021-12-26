@@ -13,8 +13,10 @@
     $date = $datetime_split[0];
     $time = $datetime_split[1];
     $ch = number_format($result_api["rain"], 1) ;
-    $sr = number_format($result_api["solrad"], 1);
+    $sr = floatval($result_api["solrad"]);
     $wl = number_format($result_api_water["waterlevel"],1);
+
+    echo $sr;
 
     mysqli_query($conn, "INSERT INTO awsdata(curahhujan, radiasi, pasut, date, time) VALUES('$ch', '$sr', '$wl', '$date', '$time')");
 ?>
