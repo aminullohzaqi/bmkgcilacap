@@ -90,7 +90,7 @@
         <div class="row d-flex justify-content-between">
             <div class="col-md-6">
                 <div class="last-update">
-                    <h4>Last Update: <?php echo $result_api["waktu"]; ?></h4>
+                    <h4>Last Update: <?php echo $result_api["waktu"]; ?> UTC</h4>
                 </div>
             </div>
             <div class="col-md-6">
