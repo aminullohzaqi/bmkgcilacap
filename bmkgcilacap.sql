@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Des 2021 pada 09.57
+-- Waktu pembuatan: 27 Des 2021 pada 10.04
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.1
 
@@ -94,7 +94,7 @@ INSERT INTO `bmkgfiles` (`id`, `namafile`, `dateinput`) VALUES
 CREATE TABLE `user` (
   `id` int(3) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
+  `password` varchar(50) NOT NULL,
   `role` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -103,7 +103,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `role`) VALUES
-(1, 'bmkg', 'tunggulwulung', 'admin');
+(1, 'bmkg', '370eecb3a61a9c7d2616a84d93eaad2f', 'admin');
 
 --
 -- Indexes for dumped tables

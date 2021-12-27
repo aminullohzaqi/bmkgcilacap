@@ -54,7 +54,7 @@
 if(isset($_POST["Submit"])){
 	include "../koneksi.php";
     $username=$_POST['username'];
-    $password=$_POST['password'];
+    $password= md5($_POST['password']);
     $query=mysqli_query($conn, "SELECT * FROM user WHERE username='$username' AND password='$password'");    
     if (mysqli_num_rows($query)==0){
 		?>
