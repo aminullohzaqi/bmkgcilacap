@@ -27,8 +27,8 @@ if (isset($_POST['Submit'])) {
 
     $file = $_FILES['fileUpload']['tmp_name'];
 
-    if (!in_array($extension, ['pdf'])) {
-        echo "<script type='text/javascript'>alert('File type is not PDF'); window.location.href='index.php';</script>";
+    if (!in_array($extension, ['pdf', 'jpg', 'jpeg', 'png'])) {
+        echo "<script type='text/javascript'>alert('File type is not supported'); window.location.href='index.php';</script>";
     }  else {
         unlink("../Files/" . getFileName($fileType));
         if (move_uploaded_file($file, $destination)) {
