@@ -1,6 +1,13 @@
 <?php
     include 'koneksi.php';
 
+    $dateNow = date('Ymd');
+    $dateBefore = date('Ymd', strtotime('-1 day', strtotime($dateNow)));
+
+    $year = date('Y');
+    $month = date('m');
+    $day = date('d');
+
     $prakiraanCuacaWilayahPelayanan = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 31");
     $resultPrakiraanCuacaWilayahPelayanan = mysqli_fetch_array($prakiraanCuacaWilayahPelayanan);
 
@@ -67,13 +74,14 @@
         <div class="row d-flex justify-content-around">
             <div class="col-md-6">
                 <div class="content-title">
-                    <h5>Prakiraan Cuaca Wilayah Pelayanan</h5>
+                    <h5>Prakiraan Cuaca Perairan</h5>
                 </div>
                 <div class="content-subtitle">
-                    <p><?php echo $resultPrakiraanCuacaWilayahPelayanan[2] ?></p>
+                    <p><?php echo ("$year-$month-$day"); ?></p>
                 </div>
                 <div class="card">
-                <iframe src="Files/<?php echo $resultPrakiraanCuacaWilayahPelayanan[1] ?>"></iframe>
+                    <img src="https://peta-maritim.bmkg.go.id/render-static/w3g/<?php echo $year; ?>/<?php echo $month; ?>/<?php echo $dateBefore; ?>12/cilacap/swh_<?php echo $dateNow; ?>00.png" alt="">
+                    
                 </div>
             </div>
             <div class="col-md-6">
@@ -100,6 +108,19 @@
                     <iframe src="Files/<?php echo $resultPrakiraanCuacaPelabuhan[1] ?>"></iframe>
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="content-title">
+                    <h5>Prakiraan Cuaca Wilayah Pelayanan</h5>
+                </div>
+                <div class="content-subtitle">
+                    <p><?php echo $resultPrakiraanCuacaWilayahPelayanan[2] ?></p>
+                </div>
+                <div class="card">
+                    <iframe src="Files/<?php echo $resultPrakiraanCuacaWilayahPelayanan[1] ?>"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-start">
             <div class="col-md-6">
                 <div class="content-title">
                     <h5>Pasang Surut</h5>
