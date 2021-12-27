@@ -9,6 +9,12 @@
 
     $informasiPetir = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 23");
     $resultInformasiPetir = mysqli_fetch_array($informasiPetir);
+
+    $informasiPetir2 = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 24");
+    $resultInformasiPetir2 = mysqli_fetch_array($informasiPetir2);
+
+    $informasiPetir3 = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 25");
+    $resultInformasiPetir3 = mysqli_fetch_array($informasiPetir3);
 ?>
 
 <!DOCTYPE html>
@@ -85,16 +91,32 @@
                 </div>
             </div>
         </div>
-        <div class="row d-flex justify-content-start">
-            <div class="col-md-6">
-                <div class="content-title">
-                    <h5>Informasi Petir</h5>
-                </div>
+        <div class="row d-flex justify-content-around">
+            <div class="content-title">
+                <h5>Informasi Petir</h5>
+            </div>
+            <div class="col-md-4">
                 <div class="content-subtitle">
                     <p><?php echo $resultInformasiPetir[2] ?></p>
                 </div>
                 <div class="card">
                     <iframe src="Files/<?php echo $resultInformasiPetir[1] ?>"></iframe>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="content-subtitle">
+                    <p><?php echo $resultInformasiPetir2[2] ?></p>
+                </div>
+                <div class="card">
+                    <iframe src="Files/<?php echo $resultInformasiPetir2[1] ?>"></iframe>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="content-subtitle">
+                    <p><?php echo $resultInformasiPetir3[2] ?></p>
+                </div>
+                <div class="card">
+                    <iframe src="Files/<?php echo $resultInformasiPetir3[1] ?>"></iframe>
                 </div>
             </div>
         </div>
