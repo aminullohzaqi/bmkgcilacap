@@ -14,6 +14,7 @@
     <title>BMKG Cilacap</title>
     <link rel="stylesheet" type="text/css" href="Assets/css/bootstrap@5.1.3.css">
     <link rel="stylesheet" type="text/css" href="Assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="Assets/css/slide-in.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed">
@@ -54,6 +55,16 @@
         </div>
     </nav>
 
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container jumbotron-content">
+            <img class="inline-photo-right show-on-scroll" style="height: 5em; width: auto; margin-top: 0.8em;" src="Assets/img/logo_bmkg.png">
+            <div class="title-jumbotron inline-photo-left show-on-scroll" style="margin-left: 1.5em;">
+                <h1 class="display-4"><strong>BMKG Cilacap</strong></h1>
+                <p class="lead"><strong>Info Cuaca Khusus Pertamina dan Area 70</strong></p>
+            </div>
+        </div>
+    </div>
+
     <div class="container content">
         <div class="row d-flex justify-content-around">
             <div class="col-md-6">
@@ -93,7 +104,7 @@
         </div>
     </div>
     
-
+    <script src="Assets/js/show-on-scroll.js"></script>
     <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/bootstrap@5.1.3.js"></script>
 </body>

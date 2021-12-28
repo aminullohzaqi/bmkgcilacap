@@ -8,8 +8,26 @@ body{
     margin-top: 30px;
 }
 
-.brand-logo, .index{
+.brand-logo, .jumbotron-content{
     display: flex;
+}
+
+.jumbotron{
+    background-image: url(../img/bmkg-jumbo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 25em;
+}
+
+.jumbotron-content{
+    background-color: rgba(255,255,255,0.8);
+    /* width: 90%; */
+    margin-left: 0;
+    padding: 3.2em;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
 }
 
 a, a:hover, a:focus, a:active{
