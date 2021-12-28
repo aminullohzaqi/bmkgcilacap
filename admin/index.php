@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <div class="card shadow">
                         <div class="upload-title">
-                            <h5 class="text-center">Upload File PDF</h5>
+                            <h5 class="text-center">Upload File PDF / JPG</h5>
                         </div>
                         <form action="proses.php" method="POST" enctype="multipart/form-data" >
                             <div class="mb-3">
