@@ -4,8 +4,12 @@
     $dateNow = date('Ymd');
     $dateBefore = date('Ymd', strtotime('-1 day', strtotime($dateNow)));
 
-    $year = date('Y');
-    $month = date('m');
+    $splitYear = str_split($dateBefore,4);
+    $year = $splitYear[0];
+
+    $splitMonth = str_split($splitYear[1], 2);
+    $month = $splitMonth[0];
+
     $day = date('d');
 
     $prakiraanCuacaWilayahPelayanan = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 31");
@@ -80,7 +84,7 @@
                     <p><?php echo ("$year-$month-$day"); ?></p>
                 </div>
                 <div class="card">
-                    <img src="https://peta-maritim.bmkg.go.id/render-static/w3g/<?php echo $year; ?>/<?php echo $month; ?>/<?php echo $dateBefore; ?>12/cilacap/swh_<?php echo $dateNow; ?>00.png" alt="">
+                    <img src="https://peta-maritim.bmkg.go.id/render-static/w3g/<?php echo $year; ?>/<?php echo $month; ?>/<?php echo $dateBefore; ?>12/cilacap/swh.gif" alt="">
                     
                 </div>
             </div>
