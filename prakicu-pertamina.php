@@ -92,7 +92,7 @@
             </div>
         </div>
         <div class="row d-flex justify-content-around">
-            <div class="content-title">
+            <div class="content-title col-md-12">
                 <h5>Informasi Petir</h5>
             </div>
             <div class="col-md-4">

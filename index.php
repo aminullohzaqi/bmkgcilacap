@@ -56,11 +56,13 @@
     </nav>
 
     <div class="jumbotron jumbotron-fluid">
-        <div class="container jumbotron-content">
-            <img class="inline-photo-right show-on-scroll" style="height: 5em; width: auto; margin-top: 0.8em;" src="Assets/img/logo_bmkg.png">
-            <div class="title-jumbotron inline-photo-left show-on-scroll" style="margin-left: 1.5em;">
-                <h1 class="display-4"><strong>BMKG Cilacap</strong></h1>
-                <p class="lead"><strong>Info Cuaca Khusus Pertamina dan Area 70</strong></p>
+        <div class="content-jumbotron">
+            <div class="container jumbotron-content">
+                <img class="inline-photo-right show-on-scroll" style="height: 5em; width: auto; margin-top: 0.8em;" src="Assets/img/logo_bmkg.png">
+                <div class="title-jumbotron inline-photo-left show-on-scroll" style="margin-left: 1.5em;">
+                    <h1 class="display-4"><strong>BMKG Cilacap</strong></h1>
+                    <p class="lead"><strong>Info Cuaca Khusus Pertamina dan Area 70</strong></p>
+                </div>
             </div>
         </div>
     </div>

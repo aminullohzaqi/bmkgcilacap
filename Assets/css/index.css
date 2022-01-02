@@ -20,11 +20,15 @@ body{
     height: 25em;
 }
 
+.content-jumbotron{
+    padding-top: 10.5em;
+}
+
 .jumbotron-content{
     background-color: rgba(255,255,255,0.8);
     /* width: 90%; */
     margin-left: 0;
-    padding: 3.2em;
+    padding: 2.6em;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     overflow: hidden;
@@ -71,3 +75,9 @@ object{
 .even{
     background-color: #F4F6F6;
 }
+
+@media screen and (max-width: 480px) {
+    .content-jumbotron{
+        padding-top: 2em;
+    }
+  }
