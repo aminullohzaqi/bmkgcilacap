@@ -67,7 +67,9 @@
                     <p><?php echo $resultPeringatanDiniCuaca[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultPeringatanDiniCuaca[1] ?>"></iframe>
+                    <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPeringatanDiniCuaca[1] ?>&embedded=true" ></iframe>
+                    </object>
                 </div>
             </div>
             <div class="col-md-6">
@@ -78,7 +80,9 @@
                     <p><?php echo $resultPeringatanDiniGelombang[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultPeringatanDiniGelombang[1] ?>"></iframe>
+                    <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPeringatanDiniGelombang[1] ?>&embedded=true" ></iframe>
+                    </object>
                 </div>
             </div>
         </div>

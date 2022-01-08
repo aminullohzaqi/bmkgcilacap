@@ -76,7 +76,9 @@
                     <p><?php echo $resultPrakiraanCuacaKilang[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultPrakiraanCuacaKilang[1] ?>"></iframe>
+                    <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPrakiraanCuacaKilang[1] ?>&embedded=true" ></iframe>
+                    </object>
                 </div>
             </div>
             <div class="col-md-6">
@@ -87,7 +89,9 @@
                     <p><?php echo $resultPrakiraanCuacaArea70[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultPrakiraanCuacaArea70[1] ?>"></iframe>
+                    <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPrakiraanCuacaArea70[1] ?>&embedded=true"></iframe>
+                    </object>
                 </div>
             </div>
         </div>
@@ -100,7 +104,9 @@
                     <p><?php echo $resultInformasiPetir[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultInformasiPetir[1] ?>"></iframe>
+                    <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultInformasiPetir[1] ?>&embedded=true"></iframe>
+                    </object>
                 </div>
             </div>
             <div class="col-md-4">
@@ -108,7 +114,9 @@
                     <p><?php echo $resultInformasiPetir2[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultInformasiPetir2[1] ?>"></iframe>
+                    <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultInformasiPetir2[1] ?>&embedded=true"></iframe>
+                    </object>
                 </div>
             </div>
             <div class="col-md-4">
@@ -116,7 +124,9 @@
                     <p><?php echo $resultInformasiPetir3[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultInformasiPetir3[1] ?>"></iframe>
+                    <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultInformasiPetir3[1] ?>&embedded=true"></iframe>
+                    </object>
                 </div>
             </div>
         </div>

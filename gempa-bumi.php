@@ -82,7 +82,9 @@
                     <p><?php echo $resultGempaBumi[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultGempaBumi[1] ?>"></iframe>
+                <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultGempaBumi[1] ?>&embedded=true" ></iframe>
+                    </object>
                 </div>
             </div>
         </div>

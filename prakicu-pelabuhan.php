@@ -85,7 +85,6 @@
                 </div>
                 <div class="card">
                     <img src="https://peta-maritim.bmkg.go.id/render-static/w3g/<?php echo $year; ?>/<?php echo $month; ?>/<?php echo $dateBefore; ?>12/cilacap/swh.gif" alt="">
-                    
                 </div>
             </div>
             <div class="col-md-6">
@@ -96,7 +95,9 @@
                     <p><?php echo $resultPrakiraanCuacaPelabuhanLaut[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultPrakiraanCuacaPelabuhanLaut[1] ?>"></iframe>
+                    <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPrakiraanCuacaPelabuhanLaut[1] ?>&embedded=true" ></iframe>
+                    </object>
                 </div>
             </div>
         </div>
@@ -109,7 +110,9 @@
                     <p><?php echo $resultPrakiraanCuacaPelabuhan[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultPrakiraanCuacaPelabuhan[1] ?>"></iframe>
+                    <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPrakiraanCuacaPelabuhan[1] ?>&embedded=true" ></iframe>
+                    </object>
                 </div>
             </div>
             <div class="col-md-6">
@@ -120,7 +123,9 @@
                     <p><?php echo $resultPrakiraanCuacaWilayahPelayanan[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultPrakiraanCuacaWilayahPelayanan[1] ?>"></iframe>
+                    <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPrakiraanCuacaWilayahPelayanan[1] ?>&embedded=true" ></iframe>
+                    </object>
                 </div>
             </div>
         </div>
@@ -133,7 +138,9 @@
                     <p><?php echo $resultPasangSurut[2] ?></p>
                 </div>
                 <div class="card">
-                    <iframe src="Files/<?php echo $resultPasangSurut[1] ?>"></iframe>
+                    <object>
+                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPasangSurut[1] ?>&embedded=true" ></iframe>
+                    </object>
                 </div>
             </div>
         </div>

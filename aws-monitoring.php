@@ -4,6 +4,9 @@
     $data_api = file_get_contents('http://202.90.199.132/aws-new/data/station/latest/5000000060');
     $result_api = json_decode($data_api, true);
 
+    $wind_direction = $result_api["winddir"];
+    $wind_direction = number_format($wind_direction, 0);
+
     $percent_temp = ((number_format($result_api["temp"],0) - 20)/(35 - 20)) * 100;
     $percent_temp = number_format($percent_temp, 0);
 
@@ -157,7 +160,7 @@
                         <h6>Kecepatan Angin</h6>
                     </div>
                     <div class="card-gauge">
-                        <div class="GaugeMeter" data-percent="<?php echo $percent_ws; ?>" data-text="<font style='color:#424242;font-size:1em;letter-spacing:-1px'><?php echo $result_api["windspeed"]; ?></font>" data-size="200" data-theme="DarkGreen-LightGreen" data-back="RGBa(0,0,0,.1)" data-animate_gauge_colors="1" data-animate_text_colors="1" data-width="15" data-label="m/s" data-style="Arch" data-label_color="#424242"></div>
+                        <div class="GaugeMeter" data-percent="<?php echo $percent_ws; ?>" data-text="<font style='color:#424242;font-size:1em;letter-spacing:-1px'><?php echo $result_api["windspeed"]; ?></font>" data-size="200" data-theme="DarkGreen-LightGreen" data-back="RGBa(0,0,0,.1)" data-animate_gauge_colors="1" data-animate_text_colors="1" data-width="15" data-label="m/s (<?php echo $wind_direction ?>°)" data-style="Arch" data-label_color="#424242"></div>
                     </div>
                 </div>
             </div>
