@@ -149,7 +149,7 @@
                     clearInterval(ref)
                 }
             });
-        }, 5000)
+        }, 10000)
     }
 
     showIframe("<?php echo $resultPrakiraanCuacaKilang[1] ?>", "#cuacaKilang");
