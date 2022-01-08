@@ -41,6 +41,7 @@
                                     <option value="31">Prakiraan Cuaca Wilayah Pelayanan</option>
                                     <option value="32">Prakiraan Cuaca Laut</option>
                                     <option value="33">Prakiraan Cuaca Pelabuhan</option>
+                                    <option value="34">Pasang Surut</option>
                                     <option disabled>──────────</option>
                                     <option value="41">Peringatan Dini Cuaca</option>
                                     <option value="42">Peringatan Dini Gelombang</option>
