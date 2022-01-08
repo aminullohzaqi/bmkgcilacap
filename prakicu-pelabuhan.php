@@ -32,6 +32,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMKG Cilacap</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="Assets/css/bootstrap@5.1.3.css">
     <link rel="stylesheet" type="text/css" href="Assets/css/index.css">
 </head>
@@ -94,10 +95,8 @@
                 <div class="content-subtitle">
                     <p><?php echo $resultPrakiraanCuacaPelabuhanLaut[2] ?></p>
                 </div>
-                <div class="card">
-                    <object>
-                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPrakiraanCuacaPelabuhanLaut[1] ?>&embedded=true" ></iframe>
-                    </object>
+                <div class="card" id="pelabuhanLaut">
+                    
                 </div>
             </div>
         </div>
@@ -109,10 +108,8 @@
                 <div class="content-subtitle">
                     <p><?php echo $resultPrakiraanCuacaPelabuhan[2] ?></p>
                 </div>
-                <div class="card">
-                    <object>
-                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPrakiraanCuacaPelabuhan[1] ?>&embedded=true" ></iframe>
-                    </object>
+                <div class="card" id="pelabuhan">
+
                 </div>
             </div>
             <div class="col-md-6">
@@ -122,10 +119,8 @@
                 <div class="content-subtitle">
                     <p><?php echo $resultPrakiraanCuacaWilayahPelayanan[2] ?></p>
                 </div>
-                <div class="card">
-                    <object>
-                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPrakiraanCuacaWilayahPelayanan[1] ?>&embedded=true" ></iframe>
-                    </object>
+                <div class="card" id="wilayahPelayanan">
+
                 </div>
             </div>
         </div>
@@ -137,10 +132,8 @@
                 <div class="content-subtitle">
                     <p><?php echo $resultPasangSurut[2] ?></p>
                 </div>
-                <div class="card">
-                    <object>
-                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPasangSurut[1] ?>&embedded=true" ></iframe>
-                    </object>
+                <div class="card" id="pasangSurut">
+
                 </div>
             </div>
         </div>
@@ -150,4 +143,34 @@
     <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/bootstrap@5.1.3.js"></script>
 </body>
+<script>
+    function showIframe(url, id){
+        var URL = "https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/" + url + "&embedded=true";
+        var count = 0;
+        var iframe = ` <iframe id = "myIframe" src = "${URL}" frameborder = "0"></iframe>`;
+                
+        $(id).html(iframe);
+            $('#myIframe').on('load', function(){ 
+            count++;
+            if(count>0){
+                clearInterval(ref)
+            }
+        });
+
+        var ref = setInterval(()=>{
+            $(id).html(iframe);
+            $('#myIframe').on('load', function() {
+                count++;
+                if (count > 0) {
+                    clearInterval(ref)
+                }
+            });
+        }, 5000)
+    }
+
+    showIframe("<?php echo $resultPrakiraanCuacaPelabuhanLaut[1] ?>", "#pelabuhanLaut");
+    showIframe("<?php echo $resultPrakiraanCuacaPelabuhan[1] ?>", "#pelabuhan");
+    showIframe("<?php echo $resultPrakiraanCuacaWilayahPelayanan[1] ?>", "#wilayahPelayanan");
+    showIframe("<?php echo $resultPasangSurut[1] ?>", "#pasangSurut");
+</script>
 </html>

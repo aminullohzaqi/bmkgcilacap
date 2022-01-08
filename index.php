@@ -12,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMKG Cilacap</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="Assets/css/bootstrap@5.1.3.css">
     <link rel="stylesheet" type="text/css" href="Assets/css/index.css">
     <link rel="stylesheet" type="text/css" href="Assets/css/slide-in.css">
@@ -81,10 +82,8 @@
                 <div class="content-title">
                     <h5>Prakiraan Hujan lebat</h5>
                 </div>
-                <div class="card">
-                    <object>
-                        <iframe src="https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/<?php echo $resultPrakiraanHujanLebat[1] ?>&embedded=true" ></iframe>
-                    </object>
+                <div class="card" id="cardContainer">
+    
                 </div>
             </div>
         </div>
@@ -112,4 +111,32 @@
     <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/bootstrap@5.1.3.js"></script>
 </body>
+
+<script>
+    function showIframe(url, id){
+        var URL = "https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/" + url + "&embedded=true";
+        var count = 0;
+        var iframe = ` <iframe id = "myIframe" src = "${URL}" frameborder = "0"></iframe>`;
+                
+        $(id).html(iframe);
+            $('#myIframe').on('load', function(){ 
+            count++;
+            if(count>0){
+                clearInterval(ref)
+            }
+        });
+
+        var ref = setInterval(()=>{
+            $(id).html(iframe);
+            $('#myIframe').on('load', function() {
+                count++;
+                if (count > 0) {
+                    clearInterval(ref)
+                }
+            });
+        }, 4000)
+    }
+
+    showIframe("<?php echo $resultPrakiraanHujanLebat[1] ?>", "#cardContainer");
+</script>
 </html>
