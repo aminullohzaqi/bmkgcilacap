@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Des 2021 pada 10.04
+-- Waktu pembuatan: 03 Jan 2022 pada 02.43
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.1
 
@@ -52,7 +52,11 @@ INSERT INTO `awsdata` (`id`, `curahhujan`, `radiasi`, `pasut`, `date`, `time`) V
 (24, '0.00', '972.30', '1.60', '2021-12-26', '05:10:00'),
 (25, '0.00', '944.50', '1.00', '2021-12-27', '02:17:00'),
 (26, '0.00', '371.50', '0.90', '2021-12-27', '02:23:00'),
-(27, '0.00', '794.00', '1.00', '2021-12-27', '02:38:00');
+(27, '0.00', '794.00', '1.00', '2021-12-27', '02:38:00'),
+(28, '0.00', '213.40', '1.40', '2021-12-27', '09:06:00'),
+(29, '0.00', '1077.00', '1.00', '2021-12-28', '03:27:00'),
+(30, '0.00', '785.90', '1.00', '2022-01-01', '03:19:00'),
+(31, '0.80', '242.90', '1.60', '2022-01-02', '09:45:00');
 
 -- --------------------------------------------------------
 
@@ -71,17 +75,17 @@ CREATE TABLE `bmkgfiles` (
 --
 
 INSERT INTO `bmkgfiles` (`id`, `namafile`, `dateinput`) VALUES
-(11, 'prakiraan-hujan-lebat.pdf', '2021-12-24'),
-(21, 'prakiraan-kilang-pertamina.pdf', '2021-12-24'),
-(22, 'prakiraan-area-70.pdf', '2021-12-24'),
-(23, 'petir3.png', '2021-12-27'),
-(24, 'petir2.png', '2021-12-27'),
-(25, 'petir1.png', '2021-12-27'),
+(11, 'hujan-lebat.pdf', '2021-12-29'),
+(21, 'PRAKICU KILANG  1 JANUARI 2022.pdf', '2022-01-01'),
+(22, 'PRAKICU  AREA 70 1 JANUARI 2022.pdf', '2022-01-01'),
+(23, 'SAMBARAN PETIR 3.pdf', '2022-01-01'),
+(24, 'SAMBARAN PETIR 2.pdf', '2022-01-01'),
+(25, 'SAMBARAN PETIR 1.pdf', '2022-01-01'),
 (31, 'prakiraan cuaca wilayah pelayanan.pdf', '2021-12-27'),
 (32, 'prakiraan cuac pelabuhan laut.pdf', '2021-12-27'),
 (33, 'prakiraan cuac pelabuhan laut.pdf', '2021-12-27'),
 (34, 'pasut.pdf', '2021-12-24'),
-(41, 'peringatan-dini-cuaca.pdf', '2021-12-24'),
+(41, 'peringatan dini cuaca.pdf', '2022-01-03'),
 (42, 'peringatan-dini-gelombang-tinggi.pdf', '2021-12-24'),
 (51, 'gempa-bumi.pdf', '2021-12-24');
 
@@ -135,7 +139,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `awsdata`
 --
 ALTER TABLE `awsdata`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT untuk tabel `bmkgfiles`
