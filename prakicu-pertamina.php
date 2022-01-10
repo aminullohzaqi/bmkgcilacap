@@ -126,36 +126,35 @@
     <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/bootstrap@5.1.3.js"></script>
 </body>
-
-<script>
-    function showIframe(url, id){
-        var URL = "https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/" + url + "&embedded=true";
-        var count = 0;
-        var iframe = ` <iframe id = "myIframe" src = "${URL}" frameborder = "0"></iframe>`;
-                
-        $(id).html(iframe);
-            $('#myIframe').on('load', function(){ 
-            count++;
-            if(count>0){
-                clearInterval(ref)
-            }
-        });
-
-        var ref = setInterval(()=>{
+    <script>
+        function showIframe(url, id, iframeTag, iframeId){
+            var URL = "https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/" + url + "&embedded=true";
+            var count = 0;
+            var iframe = `<iframe id =` + iframeId + ` src = "${URL}" frameborder = "0"></iframe>`;
+                    
             $(id).html(iframe);
-            $('#myIframe').on('load', function() {
+                $(iframeTag).on('load', function(){ 
                 count++;
-                if (count > 0) {
+                if(count>0){
                     clearInterval(ref)
                 }
             });
-        }, 10000)
-    }
 
-    showIframe("<?php echo $resultPrakiraanCuacaKilang[1] ?>", "#cuacaKilang");
-    showIframe("<?php echo $resultPrakiraanCuacaArea70[1] ?>", "#cuacaArea70");
-    showIframe("<?php echo $resultInformasiPetir[1] ?>", "#infoPetir1");
-    showIframe("<?php echo $resultInformasiPetir2[1] ?>", "#infoPetir2");
-    showIframe("<?php echo $resultInformasiPetir3[1] ?>", "#infoPetir3");
-</script>
+            var ref = setInterval(()=>{
+                $(id).html(iframe);
+                $(iframeTag).on('load', function() {
+                    count++;
+                    if (count > 0) {
+                        clearInterval(ref)
+                    }
+                });
+            }, 5000)
+        }
+
+        showIframe("<?php echo $resultPrakiraanCuacaKilang[1] ?>", "#cuacaKilang", "#iframeKilang", "iframeKilang");
+        showIframe("<?php echo $resultPrakiraanCuacaArea70[1] ?>", "#cuacaArea70", "#iframeArea70", "iframeArea70");
+        showIframe("<?php echo $resultInformasiPetir[1] ?>", "#infoPetir1", "#iframePetir", "iframePetir");
+        showIframe("<?php echo $resultInformasiPetir2[1] ?>", "#infoPetir2", "#iframePetir2", "iframePetir2");
+        showIframe("<?php echo $resultInformasiPetir3[1] ?>", "#infoPetir3", "#iframePetir3", "iframePetir3");
+    </script>
 </html>

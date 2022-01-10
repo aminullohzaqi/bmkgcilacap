@@ -3,6 +3,9 @@
 
     $prakiraanHujanLebat = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 11");
     $resultPrakiraanHujanLebat = mysqli_fetch_array($prakiraanHujanLebat);
+
+    $imgCitra = file_get_contents("http://202.90.198.22/IMAGE/ANIMASI/H08_EH_Jateng_m18.gif");
+    file_put_contents("Files/citra.gif", $imgCitra);
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +78,7 @@
                     <h5>Citra Satelit Jawa Tengah</h5>
                 </div>
                 <div class="card">
-                    <img src="https://inderaja.bmkg.go.id/IMAGE/HIMA/H08_EH_Jateng.png?id=58862j8tsm2edeliuf58sja" alt="">
+                    <img src="Files/citra.gif" alt="">
                 </div>
             </div>
             <div class="col-md-6">
@@ -83,7 +86,7 @@
                     <h5>Prakiraan Hujan lebat</h5>
                 </div>
                 <div class="card" id="cardContainer">
-    
+                    <iframe src="https://signature.bmkg.go.id/weather"></iframe>
                 </div>
             </div>
         </div>
@@ -137,6 +140,5 @@
         }, 4000)
     }
 
-    showIframe("<?php echo $resultPrakiraanHujanLebat[1] ?>", "#cardContainer");
 </script>
 </html>

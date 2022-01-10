@@ -91,13 +91,13 @@
 </body>
 
 <script>
-    function showIframe(url, id){
+    function showIframe(url, id, iframeTag, iframeId){
         var URL = "https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/" + url + "&embedded=true";
         var count = 0;
-        var iframe = ` <iframe id = "myIframe" src = "${URL}" frameborder = "0"></iframe>`;
+        var iframe = `<iframe id =` + iframeId + ` src = "${URL}" frameborder = "0"></iframe>`;
                 
         $(id).html(iframe);
-            $('#myIframe').on('load', function(){ 
+            $(iframeTag).on('load', function(){ 
             count++;
             if(count>0){
                 clearInterval(ref)
@@ -106,7 +106,7 @@
 
         var ref = setInterval(()=>{
             $(id).html(iframe);
-            $('#myIframe').on('load', function() {
+            $(iframeTag).on('load', function() {
                 count++;
                 if (count > 0) {
                     clearInterval(ref)
@@ -115,7 +115,7 @@
         }, 5000)
     }
 
-    showIframe("<?php echo $resultPeringatanDiniCuaca[1] ?>", "#pdCuaca");
-    showIframe("<?php echo $resultPeringatanDiniGelombang[1] ?>", "#pdGelombang");
+    showIframe("<?php echo $resultPeringatanDiniCuaca[1] ?>", "#pdCuaca", "#iframeCuaca", "iframeCuaca");
+    showIframe("<?php echo $resultPeringatanDiniGelombang[1] ?>", "#pdGelombang", "#iframeGelombang", "iframeGelombang");
 </script>
 </html>

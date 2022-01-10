@@ -144,13 +144,13 @@
     <script src="Assets/js/bootstrap@5.1.3.js"></script>
 </body>
 <script>
-    function showIframe(url, id){
+    function showIframe(url, id, iframeTag, iframeId){
         var URL = "https://docs.google.com/viewer?url=https://bmkgcilacap.com/Files/" + url + "&embedded=true";
         var count = 0;
-        var iframe = ` <iframe id = "myIframe" src = "${URL}" frameborder = "0"></iframe>`;
+        var iframe = `<iframe id =` + iframeId + ` src = "${URL}" frameborder = "0"></iframe>`;
                 
         $(id).html(iframe);
-            $('#myIframe').on('load', function(){ 
+            $(iframeTag).on('load', function(){ 
             count++;
             if(count>0){
                 clearInterval(ref)
@@ -159,18 +159,18 @@
 
         var ref = setInterval(()=>{
             $(id).html(iframe);
-            $('#myIframe').on('load', function() {
+            $(iframeTag).on('load', function() {
                 count++;
                 if (count > 0) {
                     clearInterval(ref)
                 }
             });
-        }, 5000)
+        }, 6000)
     }
 
-    showIframe("<?php echo $resultPrakiraanCuacaPelabuhanLaut[1] ?>", "#pelabuhanLaut");
-    showIframe("<?php echo $resultPrakiraanCuacaPelabuhan[1] ?>", "#pelabuhan");
-    showIframe("<?php echo $resultPrakiraanCuacaWilayahPelayanan[1] ?>", "#wilayahPelayanan");
-    showIframe("<?php echo $resultPasangSurut[1] ?>", "#pasangSurut");
+    showIframe("<?php echo $resultPrakiraanCuacaPelabuhanLaut[1] ?>", "#pelabuhanLaut", "#iframePLaut", "iframePLaut");
+    showIframe("<?php echo $resultPrakiraanCuacaPelabuhan[1] ?>", "#pelabuhan", "#iframePelabuhan", "iframePelabuhan");
+    showIframe("<?php echo $resultPrakiraanCuacaWilayahPelayanan[1] ?>", "#wilayahPelayanan", "#iframeWPelayanan", "iframeWPelayanan");
+    showIframe("<?php echo $resultPasangSurut[1] ?>", "#pasangSurut", "#iframePasut", "iframePasut");
 </script>
 </html>
