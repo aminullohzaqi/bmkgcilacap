@@ -32,8 +32,6 @@
                             <div class="mb-3">
                                 <select class="form-select" name="jenis_file">
                                     <option selected disabled>Jenis File</option>
-                                    <option value="11">Pemetaan Hujan Lebat</option>
-                                    <option disabled>──────────</option>
                                     <option value="21">Prakiraan Cuaca Kilang Pertamina</option>
                                     <option value="22">Prakiraan Cuaca Area 70</option>
                                     <option value="23">Informasi Petir Kilang Pertamina</option>
