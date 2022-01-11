@@ -8,9 +8,6 @@
 
     $prakiraanHujanLebat = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 11");
     $resultPrakiraanHujanLebat = mysqli_fetch_array($prakiraanHujanLebat);
-
-    $imgCitra = file_get_contents("http://202.90.198.22/IMAGE/ANIMASI/H08_EH_Jateng_m18.gif");
-    file_put_contents("Files/citra.gif", $imgCitra);
 ?>
 
 <!DOCTYPE html>
