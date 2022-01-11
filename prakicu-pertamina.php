@@ -1,5 +1,10 @@
 <?php
+    session_start();
     include 'koneksi.php';
+
+    if(!$_SESSION["role"]){
+        header('Location: login.php');
+    }
 
     $prakiraanCuacaKilang = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 21");
     $resultPrakiraanCuacaKilang = mysqli_fetch_array($prakiraanCuacaKilang);

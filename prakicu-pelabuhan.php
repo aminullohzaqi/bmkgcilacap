@@ -1,5 +1,10 @@
 <?php
+    session_start();
     include 'koneksi.php';
+
+    if(!$_SESSION["role"]){
+        header('Location: login.php');
+    }
 
     $dateNow = date('Ymd');
     $dateBefore = date('Ymd', strtotime('-1 day', strtotime($dateNow)));

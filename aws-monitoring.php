@@ -1,6 +1,11 @@
 <?php
+    session_start();
     include 'koneksi.php';
 
+    if(!$_SESSION["role"]){
+        header('Location: login.php');
+    }
+    
     $data_api = file_get_contents('http://202.90.199.132/aws-new/data/station/latest/5000000060');
     $result_api = json_decode($data_api, true);
 

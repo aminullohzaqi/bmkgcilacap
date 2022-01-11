@@ -1,5 +1,10 @@
 <?php
+    session_start();
     include 'koneksi.php';
+
+    if(!$_SESSION["role"]){
+        header('Location: login.php');
+    }
 
     $prakiraanHujanLebat = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 11");
     $resultPrakiraanHujanLebat = mysqli_fetch_array($prakiraanHujanLebat);

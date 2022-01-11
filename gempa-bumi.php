@@ -1,6 +1,11 @@
 <?php
+    session_start();
     include 'koneksi.php';
 
+    if(!$_SESSION["role"]){
+        header('Location: login.php');
+    }
+    
     $gempaBumi = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 51");
     $resultGempaBumi = mysqli_fetch_array($gempaBumi);
 
