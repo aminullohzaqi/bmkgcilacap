@@ -18,6 +18,16 @@
 
     mysqli_query($conn, "INSERT INTO awsdata(curahhujan, radiasi, pasut, date, time) VALUES('$ch', '$sr', '$wl', '$date', '$time')");
 
+    $fileCitraName = 'citra' . time() . '.gif';
+    $fileCitra = 'Files/' . $fileCitraName;
+
+    $queryCitra =  mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id=61");
+    $resultQueryCitra = mysqli_fetch_array($queryCitra);
+
     $imgCitra = file_get_contents("http://202.90.198.22/IMAGE/ANIMASI/H08_EH_Jateng_m18.gif");
-    file_put_contents("Files/citra.gif", $imgCitra);
+    file_put_contents($fileCitra, $imgCitra);
+
+    unlink("Files/" . $resultQueryCitra[0]);
+
+    mysqli_query($conn, "UPDATE bmkgfiles SET namafile='$fileCitraName', dateinput='$date' WHERE id=61");
 ?>

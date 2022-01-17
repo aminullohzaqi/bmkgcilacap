@@ -8,6 +8,12 @@
 
     $prakiraanHujanLebat = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 11");
     $resultPrakiraanHujanLebat = mysqli_fetch_array($prakiraanHujanLebat);
+
+    $fileCitraName = mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id = 61");
+    $resultFileCitraName = mysqli_fetch_array($fileCitraName);
+
+    $linkCuacaHariIni = "http://cuacajateng.com/prakiraan/image/img_terkini/cilacap.png";
+    $linkCuacaBesok = "http://cuacajateng.com/prakiraan/image/img_besok/cilacap.png";
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +86,7 @@
                     <h5>Citra Satelit Jawa Tengah</h5>
                 </div>
                 <div class="card">
-                    <img src="Files/citra.gif" alt="">
+                    <img src="Files/<?php echo $resultFileCitraName[0]; ?>" alt="">
                 </div>
             </div>
             <div class="col-md-6">
@@ -98,7 +104,7 @@
                     <h5>Prakiraan Cuaca Cilacap Hari Ini</h5>
                 </div>
                 <div class="card">
-                    <img src="http://cuacajateng.com/prakiraan/image/img_terkini/cilacap.png" alt="">
+                    <img src="<?php echo $linkCuacaHariIni; ?>" alt="">
                 </div>
             </div>
             <div class="col-md-6">
@@ -106,7 +112,7 @@
                     <h5>Prakiraan Cuaca Esok Hari</h5>
                 </div>
                 <div class="card">
-                    <img src="http://cuacajateng.com/prakiraan/image/img_besok/cilacap.png" alt="">
+                    <img src="<?php echo $linkCuacaBesok; ?>" alt="">
                 </div>
             </div>
         </div>
