@@ -9,8 +9,21 @@
     $prakiraanHujanLebat = mysqli_query($conn, "SELECT * FROM bmkgfiles WHERE id = 11");
     $resultPrakiraanHujanLebat = mysqli_fetch_array($prakiraanHujanLebat);
 
-    $fileCitraName = mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id = 61");
-    $resultFileCitraName = mysqli_fetch_array($fileCitraName);
+    $fileCitraName = 'citra' . time() . '.gif';
+    $fileCitra = 'Files/' . $fileCitraName;
+
+    $imgCitra = file_get_contents("http://202.90.198.22/IMAGE/ANIMASI/H08_EH_Jateng_m18.gif");
+    if(file_put_contents($fileCitra, $imgCitra)){
+        $queryCitra =  mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id=61");
+        $resultQueryCitra = mysqli_fetch_array($queryCitra);
+
+        unlink("Files/" . $resultQueryCitra[0]);
+
+        mysqli_query($conn, "UPDATE bmkgfiles SET namafile='$fileCitraName', dateinput='$date' WHERE id=61");
+    };
+
+    $fileCitraNameDb = mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id = 61");
+    $resultFileCitraName = mysqli_fetch_array($fileCitraNameDb);
 
     $linkCuacaHariIni = "http://cuacajateng.com/prakiraan/image/img_terkini/cilacap.png";
     $linkCuacaBesok = "http://cuacajateng.com/prakiraan/image/img_besok/cilacap.png";
