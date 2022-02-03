@@ -17,6 +17,8 @@
         $queryCitra =  mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id=61");
         $resultQueryCitra = mysqli_fetch_array($queryCitra);
 
+        $date = date('Ymd');
+        
         unlink("Files/" . $resultQueryCitra[0]);
 
         mysqli_query($conn, "UPDATE bmkgfiles SET namafile='$fileCitraName', dateinput='$date' WHERE id=61");

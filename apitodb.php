@@ -7,7 +7,7 @@
     $data_api_water = file_get_contents('http://202.90.199.132/aws-new/data/station/latest/3000000017');
     $result_api_water = json_decode($data_api_water, true);
 
-    $datetime = $result_api_water["waktu"];
+    $datetime = $result_api["waktu"];
     $datetime_split = explode(" ", $datetime);
 
     $date = $datetime_split[0];

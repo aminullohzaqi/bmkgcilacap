@@ -18,7 +18,7 @@
     $percent_rh = ((number_format($result_api["rh"],0) - 40)/(100 - 40)) * 100;
     $percent_rh = number_format($percent_rh, 0);
 
-    $percent_ws = ((number_format($result_api["windspeed"],0) - 0)/(20 - 0)) * 100;
+    $percent_ws = ((number_format($result_api["windspeed"],0) - 0)/(8 - 0)) * 100;
     $percent_ws = number_format($percent_ws, 0);
 
 
