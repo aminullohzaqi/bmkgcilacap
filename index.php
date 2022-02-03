@@ -12,6 +12,12 @@
     $fileCitraName = 'citra' . time() . '.gif';
     $fileCitra = 'Files/' . $fileCitraName;
 
+    $filePrakicuTodayName = 'today' . time() . '.png';
+    $filePrakicuToday = 'Files/' . $filePrakicuTodayName;
+
+    $filePrakicuTomorrowName = 'tomorrow' . time() . '.png';
+    $filePrakicuTomorrow = 'Files/' . $filePrakicuTomorrowName;
+
     $imgCitra = file_get_contents("http://202.90.198.22/IMAGE/ANIMASI/H08_EH_Jateng_m18.gif");
     if(file_put_contents($fileCitra, $imgCitra)){
         $queryCitra =  mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id=61");
@@ -24,11 +30,38 @@
         mysqli_query($conn, "UPDATE bmkgfiles SET namafile='$fileCitraName', dateinput='$date' WHERE id=61");
     };
 
+    $imgToday = file_get_contents("http://cuacajateng.com/prakiraan/image/img_terkini/cilacap.png");
+    if(file_put_contents($filePrakicuToday, $imgToday)){
+        $queryToday =  mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id=62");
+        $resultQueryToday = mysqli_fetch_array($queryToday);
+
+        $date = date('Ymd');
+        
+        unlink("Files/" . $resultQueryToday[0]);
+
+        mysqli_query($conn, "UPDATE bmkgfiles SET namafile='$filePrakicuTodayName', dateinput='$date' WHERE id=62");
+    };
+
+    $imgTomorrow = file_get_contents("http://cuacajateng.com/prakiraan/image/img_besok/cilacap.png");
+    if(file_put_contents($filePrakicuTomorrow, $imgTomorrow)){
+        $queryTomorrow =  mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id=63");
+        $resultQueryTomorrow = mysqli_fetch_array($queryTomorrow);
+
+        $date = date('Ymd');
+        
+        unlink("Files/" . $resultQueryTomorrow[0]);
+
+        mysqli_query($conn, "UPDATE bmkgfiles SET namafile='$filePrakicuTomorrowName', dateinput='$date' WHERE id=63");
+    };
+
     $fileCitraNameDb = mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id = 61");
     $resultFileCitraName = mysqli_fetch_array($fileCitraNameDb);
 
-    $linkCuacaHariIni = "http://cuacajateng.com/prakiraan/image/img_terkini/cilacap.png";
-    $linkCuacaBesok = "http://cuacajateng.com/prakiraan/image/img_besok/cilacap.png";
+    $fileTodayNameDb = mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id = 62");
+    $resultFileTodayName = mysqli_fetch_array($fileTodayNameDb);
+
+    $fileTomorrowNameDb = mysqli_query($conn, "SELECT namafile FROM bmkgfiles WHERE id = 63");
+    $resultFileTomorrowName = mysqli_fetch_array($fileTomorrowNameDb);
 ?>
 
 <!DOCTYPE html>
@@ -119,7 +152,7 @@
                     <h5>Prakiraan Cuaca Cilacap Hari Ini</h5>
                 </div>
                 <div class="card">
-                    <img src="<?php echo $linkCuacaHariIni; ?>" alt="">
+                    <img src="Files/<?php echo $resultFileTodayName[0]; ?>" alt="">
                 </div>
             </div>
             <div class="col-md-6">
@@ -127,7 +160,7 @@
                     <h5>Prakiraan Cuaca Esok Hari</h5>
                 </div>
                 <div class="card">
-                    <img src="<?php echo $linkCuacaBesok; ?>" alt="">
+                    <img src="Files/<?php echo $resultFileTomorrowName[0]; ?>" alt="">
                 </div>
             </div>
         </div>
