@@ -5,6 +5,7 @@
 	<meta name="author" content="Kodinger">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Login Page</title>
+	<link rel="icon" type="image/x-icon" href="Assets/img/logo_bmkg.png" />
 	<link rel="stylesheet" type="text/css" href="../Assets/css/bootstrap@5.1.3.css">
 	<link rel="stylesheet" type="text/css" href="../Assets/css/login.css">
 </head>

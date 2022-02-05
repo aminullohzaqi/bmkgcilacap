@@ -60,6 +60,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="600">
     <title>BMKG Cilacap</title>
+    <link rel="icon" type="image/x-icon" href="Assets/img/logo_bmkg.png" />
     <script type="text/javascript" src="Assets/js/Chart.js"></script>
     <link rel="stylesheet" type="text/css" href="Assets/css/bootstrap@5.1.3.css">
     <link rel="stylesheet" type="text/css" href="Assets/css/index.css">

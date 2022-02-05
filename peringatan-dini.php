@@ -20,6 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMKG Cilacap</title>
+    <link rel="icon" type="image/x-icon" href="Assets/img/logo_bmkg.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="Assets/css/bootstrap@5.1.3.css">
     <link rel="stylesheet" type="text/css" href="Assets/css/index.css">
