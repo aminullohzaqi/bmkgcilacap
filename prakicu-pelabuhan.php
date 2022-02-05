@@ -35,6 +35,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="Informasi Cuaca Perairan Cilacap">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMKG Cilacap</title>
     <link rel="icon" type="image/x-icon" href="Assets/img/logo_bmkg.png" />
@@ -48,7 +49,7 @@
             
             <a class="navbar-brand" href="#">
                 <div class="brand-logo">
-                    <img style="height: 30px;" src="Assets/img/logo_bmkg.png">
+                    <img style="height: 30px;" src="Assets/img/logo_bmkg.png" alt="BMKG Cilacap">
                     <h5 style="margin-left: 10px; margin-top: 3px">BMKG Cilacap</h5>
                 </div>
             </a>
@@ -91,7 +92,7 @@
                     <p><?php echo ("$year-$month-$day"); ?></p>
                 </div>
                 <div class="card">
-                    <img src="https://peta-maritim.bmkg.go.id/render-static/w3g/<?php echo $year; ?>/<?php echo $month; ?>/<?php echo $dateBefore; ?>12/cilacap/swh.gif" alt="">
+                    <img src="https://peta-maritim.bmkg.go.id/render-static/w3g/<?php echo $year; ?>/<?php echo $month; ?>/<?php echo $dateBefore; ?>12/cilacap/swh.gif" alt="BMKG Cilacap">
                 </div>
             </div>
             <div class="col-md-6">

@@ -57,6 +57,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="Informasi Data Automatic Weather Station (AWS) Cilacap">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="600">
     <title>BMKG Cilacap</title>
@@ -73,7 +74,7 @@
             
             <a class="navbar-brand" href="#">
                 <div class="brand-logo">
-                    <img style="height: 30px;" src="Assets/img/logo_bmkg.png">
+                    <img style="height: 30px;" src="Assets/img/logo_bmkg.png" alt="BMKG Cilacap">
                     <h5 style="margin-left: 10px; margin-top: 3px">BMKG Cilacap</h5>
                 </div>
             </a>

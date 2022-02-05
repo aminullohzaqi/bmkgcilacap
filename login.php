@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="author" content="Kodinger">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="Description" content="Login Page BMKG Cilacap">
 	<title>Login Page</title>
 	<link rel="icon" type="image/x-icon" href="Assets/img/logo_bmkg.png" />
 	<link rel="stylesheet" type="text/css" href="../Assets/css/bootstrap@5.1.3.css">
@@ -15,7 +15,7 @@
 		<div class="row justify-content-center">
 			<div class="card-wrapper">
 				<div class="brand">
-					<img src="../Assets/img/logo_bmkg.png" alt="bmkg">
+					<img src="../Assets/img/logo_bmkg.png" alt="BMKG Cilacap">
 				</div>
 				<div class="card fat">
 					<div class="card-body">

@@ -69,6 +69,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="Informasi Cuaca Kabupaten Cilacap">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMKG Cilacap</title>
     <link rel="icon" type="image/x-icon" href="Assets/img/logo_bmkg.png" />
@@ -83,7 +84,7 @@
             
             <a class="navbar-brand" href="#">
                 <div class="brand-logo">
-                    <img style="height: 30px;" src="Assets/img/logo_bmkg.png">
+                    <img style="height: 30px;" src="Assets/img/logo_bmkg.png" alt="BMKG Cilacap">
                     <h5 style="margin-left: 10px; margin-top: 3px">BMKG Cilacap</h5>
                 </div>
             </a>
@@ -119,7 +120,7 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="content-jumbotron">
             <div class="container jumbotron-content">
-                <img class="inline-photo-right show-on-scroll" style="height: 5em; width: auto; margin-top: 0.8em;" src="Assets/img/logo_bmkg.png">
+                <img class="inline-photo-right show-on-scroll" style="height: 5em; width: auto; margin-top: 0.8em;" src="Assets/img/logo_bmkg.png" alt="BMKG Cilacap">
                 <div class="title-jumbotron inline-photo-left show-on-scroll" style="margin-left: 1.5em;">
                     <h1 class="display-4"><strong>BMKG Cilacap</strong></h1>
                     <p class="lead"><strong>Info Cuaca Khusus Pertamina dan Area 70</strong></p>
@@ -135,7 +136,7 @@
                     <h5>Citra Satelit Jawa Tengah</h5>
                 </div>
                 <div class="card">
-                    <img src="Files/<?php echo $resultFileCitraName[0]; ?>" alt="">
+                    <img src="Files/<?php echo $resultFileCitraName[0]; ?>" alt="BMKG Cilacap">
                 </div>
             </div>
             <div class="col-md-6">
@@ -153,7 +154,7 @@
                     <h5>Prakiraan Cuaca Cilacap Hari Ini</h5>
                 </div>
                 <div class="card">
-                    <img src="Files/<?php echo $resultFileTodayName[0]; ?>" alt="">
+                    <img src="Files/<?php echo $resultFileTodayName[0]; ?>" alt="BMKG Cilacap">
                 </div>
             </div>
             <div class="col-md-6">
@@ -161,7 +162,7 @@
                     <h5>Prakiraan Cuaca Esok Hari</h5>
                 </div>
                 <div class="card">
-                    <img src="Files/<?php echo $resultFileTomorrowName[0]; ?>" alt="">
+                    <img src="Files/<?php echo $resultFileTomorrowName[0]; ?>" alt="BMKG Cilacap">
                 </div>
             </div>
         </div>
