@@ -6,7 +6,7 @@
         header('Location: login.php');
     }
     
-    $data_api = file_get_contents('http://202.90.199.132/aws-new/data/station/latest/5000000060');
+    $data_api = file_get_contents('http://202.90.199.132/aws-new/data/station/latest/3000000017');
     $result_api = json_decode($data_api, true);
 
     $wind_direction = $result_api["winddir"];
