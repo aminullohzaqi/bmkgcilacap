@@ -140,11 +140,18 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="content-title">
-                    <h5>Prakiraan Hujan lebat</h5>
+                <div class="content-title title-flex">
+                    <div class="title">
+                        <h5>BMKG Signature</h5>
+                    </div>
+                    <div class="detail">
+                        <a href="https://signature.bmkg.go.id/weather?-7.667,109.028,9">
+                            <h5>&nbsp; (detail)</h5>
+                        </a>
+                    </div>
                 </div>
                 <div class="card" id="cardContainer">
-                    <iframe src="https://signature.bmkg.go.id/weather"></iframe>
+                    <iframe src="https://signature.bmkg.go.id/weather?-7.667,109.028,9"></iframe>
                 </div>
             </div>
         </div>
