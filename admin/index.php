@@ -41,7 +41,7 @@
                                     <option value="33">Prakiraan Cuaca Pelabuhan</option>
                                     <option value="34">Pasang Surut</option>
                                     <option disabled>──────────</option>
-                                    <option value="41">Peringatan Dini Cuaca</option>
+                                    <option value="41">Prakiraan Hujan Lebat</option>
                                     <option value="42">Peringatan Dini Gelombang</option>
                                     <option disabled>──────────</option>
                                     <option value="51">Informasi Gempa Bumi</option>
