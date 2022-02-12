@@ -69,7 +69,7 @@
         <div class="row d-flex justify-content-around">
             <div class="col-md-6">
                 <div class="content-title">
-                    <h5>Peringatan Dini Cuaca</h5>
+                    <h5>Prakiraan Hujan Lebat</h5>
                 </div>
                 <div class="content-subtitle">
                     <p><?php echo $resultPeringatanDiniCuaca[2] ?></p>
