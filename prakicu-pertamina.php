@@ -128,6 +128,23 @@
                 </div>
             </div>
         </div>
+        <div class="row d-flex justify-content-around">
+            <div class="col-md-12">
+                <div class="content-title title-flex">
+                    <div class="title">
+                        <h5>Peta Petir</h5>
+                    </div>
+                    <div class="detail">
+                        <a href="https://pgt.bmkg.go.id/siap/">
+                            <h5>&nbsp; (detail)</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="card" id="cardContainer">
+                    <iframe class="iframe_petir" src="https://pgt.bmkg.go.id/siap/"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="Assets/js/popper.min.js"></script>
