@@ -132,7 +132,7 @@
             <div class="col-md-12">
                 <div class="content-title title-flex">
                     <div class="title">
-                        <h5>Peta Petir</h5>
+                        <h5>Realtime Lightning Data</h5>
                     </div>
                     <div class="detail">
                         <a href="https://pgt.bmkg.go.id/siap/">
