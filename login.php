@@ -6,8 +6,8 @@
 	<meta name="Description" content="Login Page BMKG Cilacap">
 	<title>Login Page</title>
 	<link rel="icon" type="image/x-icon" href="Assets/img/logo_bmkg.png" />
-	<link rel="stylesheet" type="text/css" href="../Assets/css/bootstrap@5.1.3.css">
-	<link rel="stylesheet" type="text/css" href="../Assets/css/login.css">
+	<link rel="stylesheet" type="text/css" href="Assets/css/bootstrap@5.1.3.css">
+	<link rel="stylesheet" type="text/css" href="Assets/css/login.css">
 </head>
 
 <body class="my-login-page">
@@ -15,7 +15,7 @@
 		<div class="row justify-content-center">
 			<div class="card-wrapper">
 				<div class="brand">
-					<img src="../Assets/img/logo_bmkg.png" alt="BMKG Cilacap">
+					<img src="Assets/img/logo_bmkg.png" alt="BMKG Cilacap">
 				</div>
 				<div class="card fat">
 					<div class="card-body">
@@ -47,8 +47,8 @@
 		</div>
 	</div>
 
-	<script src="../Assets/js/popper.min.js"></script>
-    <script src="../Assets/js/bootstrap@5.1.3.js"></script>
+	<script src="Assets/js/popper.min.js"></script>
+    <script src="Assets/js/bootstrap@5.1.3.js"></script>
 </body>
 
 <?php
